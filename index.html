@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+
+        *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+ .container{
+        width: 100%;
+        min-height: 100vh;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+.logo img{
+    width:250px;
+    
+    cursor: pointer;
+    margin: 30px 0;
+}
+nav ul{
+    
+    flex: 1;
+    text-align: right;
+    align-items: center;
+    
+    
+}
+nav ul li{
+    display: inline;
+    font-size: 15px;
+    margin: 30px;
+    
+}
+nav ul li a{
+    color: black;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    color: #1b9bff;
+    transition: .5s;
+
+}
+ .navv{
+     
+        width: 40px;
+        cursor: pointer;
+        display: none;
+     
+
+        
+
+    }
+    .landing h3 {
+        font-size: 40px;
+        color: rgb(90, 197, 90);
+        animation: typing 3.5s steps(40, end) infinite;
+        overflow: hidden;
+        
+        
+    }
+    @keyframes typing{
+        from {width: 200px}
+        to {
+            width: 100%;
+        }
+    }
+    
+     @media (max-width:952px){
+         label.logo{
+             width: 14px;
+         }
+     }
+
+    @media (max-width:858px){
+        nav ul li a{display: flex;
+        flex-direction: column;}
+       label.logo{
+            width: 100px;
+        }
+        nav ul{
+            width: 200px;
+            position: relative;
+            top: 100px;
+            left: 40px;
+
+
+        }
+        nav ul li a{
+            font-size: 14px;
+         
+           position: relative;
+           right: 10px;
+           color: rgb(0, 0, 0);
+           font-family: sans-serif;
+           
+            
+            
+        }
+        ul{
+           position: fixed;
+           width: 1000%;
+           height: 100px;
+           transition: all .5s;
+           z-index: 2;
+          
+        }
+        nav ul{
+            
+       
+       color: white;
+       
+       z-index: 2;
+      padding-left: 20px;
+       
+       
+       }
+        .navv{
+            display: block;
+        }
+        #menulist{
+            overflow: hidden;
+            transition: .5s;
+        }
+    }
+   
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moha</title>
+    
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <label class="logo"><img src="my logo.png"></label>
+        
+        <ul id="menulist">
+            <li><a class="active" href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">gallery</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+        
+        <img src="menu_btn.png" class="navv" onclick="togglemenu9()">
+    </nav>
+         <div class="landing">
+             <h3>we are coming soon insha allah...</h3>
+         </div>
+        
+    
+    </div>
+    <script>
+        var menulist = document.getElementById("menulist");
+        menulist.style.maxHeight = "0px";
+        function togglemenu9() {
+            if (menulist.style.maxHeight == "0px") {
+                menulist.style.maxHeight = "130px"
+            } else {
+                menulist.style.maxHeight = "0px"
+            }
+        }
+      var typed=new typed('.animate',{
+
+        String:[
+            "coming",
+            "soon",
+            "insha allah...."
+        ],typedSpeed:50,
+        backSpeed: 50,
+      }
+      
+      
+      )
+        
+    </script>
+</body>
+</html>
